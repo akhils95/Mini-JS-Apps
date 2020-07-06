@@ -1,4 +1,4 @@
-# Mini-JavaScript-Apps
+# Mini JavaScript Apps
 
 ---
 
