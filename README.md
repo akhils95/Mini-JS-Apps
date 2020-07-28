@@ -7,4 +7,7 @@
 - **Quote Generator**
 
 	Font Family used: Montserrat  
-	Icons from: font awesome
+	Icons from: Font Awesome  
+	Background: Hero Patterns
+	API: Forismatic
+	Twitter sharing: Twitter developer api
