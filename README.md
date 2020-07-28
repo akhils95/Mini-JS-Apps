@@ -18,6 +18,6 @@
 
 	Loads a bunch of images using an api and keeps on loading more as you keep scrolling.
 
-	Font Family: Ubuntu
-	Loading icon: loading.io
+	Font Family: Ubuntu  
+	Loading icon: loading.io  
 	API: Unsplash
