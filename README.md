@@ -21,3 +21,18 @@
 	Font Family: Ubuntu  
 	Loading icon: loading.io  
 	API: Unsplash
+
+- **Picture In Picture**
+
+	Choose a screen, window or tab and get it displayed in a floating video player over everything on your screen.
+
+	Font Family: Krona One  
+
+- **Joke Teller**
+
+	Who wants to read a joke when you can here one.
+
+	Font Family: Ranchers  
+	Text to Speech API: voicers.org  
+	Background GIF: https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY  
+	Jokes API: [Click Here](https://sv443.net/jokeapi/v2/)  
