@@ -3,13 +3,25 @@
 <head>
 	<title>Mini JS Apps</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
-	<ul>
+	<div class="theme-switch-wrapper">
+		<span id="toggle-icon">
+			<span class="toggle-text">Light Mode</span>
+			<i class="fas fa-sun"></i>
+			<label class="theme-switch">
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+		</span>
+	</div>
+	<ul class="list">
 		<li>
 			<a href="apps/QuoteGenerator/index.html" target="_blank">Quote Generator</a>
 		</li>
-		<li style="text-decoration: line-through;">
+		<li>
 			<a href="apps/InfiniteScroll/index.html" target="_blank">Infinite Scroll</a>
 		</li>
 		<li>
@@ -27,6 +39,10 @@
 		<li>
 			<a href="apps/AnimatedNavigation/index.html" target="_blank">Animated Navigation</a>
 		</li>
+		<li>
+			<a href="apps/MusicPlayer/index.html" target="_blank">Music Player</a>
+		</li>
 	</ul>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
