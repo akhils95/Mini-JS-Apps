@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html style="box-sizing: border-box;">
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Joke Teller</title>
 	<link rel="icon" type="image/png" href="images/favicon.svg">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body style="background-color: black; color: whitesmoke;">
-	<div style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-		<h1 style="font-size: 3rem; margin: 0.5rem;">Working on a few things...</h1>
-		<h2 style="font-size: 2rem; margin: 0.5rem;">Will be back live soon!</h2>
+<body>
+	<div class="container">
+		<button id="button">Tell Me A Joke</button>
+		<audio id="audio" controls hidden></audio>
 	</div>
+	<!-- Script -->
+	<script src="script.js" type="text/javascript"></script>
 </body>
 </html>
