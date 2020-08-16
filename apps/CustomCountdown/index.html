@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Countdown</title>
-    <link rel="icon" type="image/png" href="images/favicon.svg">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="images/favicon.svg" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Script -->
     <video class="video-background" loop muted autoplay>
-    	<source src="images/hourglass.mp4">
+      <source src="images/hourglass.mp4" />
     </video>
     <div class="video-overlay"></div>
     <div class="container">
-    	<div class="input-container" id="input-container">
-    		<h1>Create a Custom Countdown!</h1>
-    		<form class="form" id="countdown-form">
-    			<label for="title">Title</label>
-    			<input type="text" id="title" placeholder="What is the countdown for?">
-    			<label for="date">Set a Date</label>
-    			<input type="date" id="date">
-    			<button type="submit">Start Countdown</button>
-    		</form>
-    	</div>
-    	<div class="countdown" id="countdown" hidden>
-    		<h1 id="countdown-title"></h1>
-    		<ul>
-    			<li><span></span>Days</li>
-    			<li><span></span>Hours</li>
-    			<li><span></span>Minutes</li>
-    			<li><span></span>Seconds</li>
-    		</ul>
-    		<button id="countdown-button">Reset</button>
-    	</div>
-    	<div class="complete" id="complete" hidden>
-    		<h1 class="complete-title">Countdown Complete</h1>
-    		<h1 id="complete-info">Countdown Finished on 05-07-2020</h1>
-    		<button id="complete-button">New Countdown</button>
-    	</div>
+      <div class="input-container" id="input-container">
+        <h1>Create a Custom Countdown!</h1>
+        <form class="form" id="countdown-form">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="What is the countdown for?"
+          />
+          <label for="date">Set a Date</label>
+          <input type="date" id="date" />
+          <button type="submit">Start Countdown</button>
+        </form>
+      </div>
+      <div class="countdown" id="countdown" hidden>
+        <h1 id="countdown-title"></h1>
+        <ul>
+          <li><span></span>Days</li>
+          <li><span></span>Hours</li>
+          <li><span></span>Minutes</li>
+          <li><span></span>Seconds</li>
+        </ul>
+        <button id="countdown-button">Reset</button>
+      </div>
+      <div class="complete" id="complete" hidden>
+        <h1 class="complete-title">Countdown Complete</h1>
+        <h1 id="complete-info">Countdown Finished on 05-07-2020</h1>
+        <button id="complete-button">New Countdown</button>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
