@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 30px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.red-strip {
+  z-index: 1000;
+  height: 20px;
+  width: 300px;
+  background: rgb(122, 9, 9);
+  position: relative;
+  top: 20px;
+  left: -100px;
+  transform: rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: dashed white 2px;
+  color: white;
+}
+
+.red-strip:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.red-strip h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.calculator {
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin-top: -45px;
+}
+
+.calculator-display {
+  background: black;
+  color: whitesmoke;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 10px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 80px;
+}
+
+.screen-glare {
+  background: linear-gradient(
+    330deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+}
+
+.calculator-display h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  height: 90%;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  font-weight: bold;
+}
+
+button {
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  background: rgb(218, 218, 218);
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: rgb(100, 100, 100);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.equal-sign {
+  background: orangered;
+}
+
+.decimal,
+.clear {
+  font-weight: bold;
+}
+
+.clear {
+  background: rgb(122, 9, 9);
+  color: white;
+}
+
+@media screen and (max-width: 670px) {
+  body {
+    padding: 10px;
+  }
+
+  .calculator {
+    height: calc(100vh - 20px);
+  }
+}
