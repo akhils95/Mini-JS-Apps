@@ -2,6 +2,7 @@ const appInfo = [
   ["Tic Tac Toe", "TicTacToe"],
   ["Math Sprint Game", "MathSprintGame"],
   ["Calculator", "Calculator"],
+  ["Stone Paper Scissors Lizard Spock - Game", "BigBangTheoryGame"],
   ["Light / Dark Mode", "LightModeDarkMode"],
   ["Custom Countdown", "CustomCountdown"],
   ["Bookmarks", "Bookmarks"],
