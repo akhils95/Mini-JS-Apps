@@ -51,7 +51,7 @@ function bestScoresToDOM() {
 
 // check local storage for best scores
 function getSavedBestScores() {
-  if (localStorage.getItem(bestScores)) {
+  if (localStorage.getItem("bestScores")) {
     bestScoreArray = JSON.parse(localStorage.bestScores);
   } else {
     bestScoreArray = [
@@ -70,13 +70,13 @@ function updateBestScore() {
   bestScoreArray.forEach((score, i) => {
     if (questionQuantity == score.questions) {
       const savedBestScore = Number(bestScoreArray[i].bestScore);
-      if (savedBestScore === 0 || savedBestScore > finalTime) {
+      if (savedBestScore == 0 || savedBestScore > finalTime) {
         bestScoreArray[i].bestScore = finalTimeDisplay;
       }
     }
   });
-  bestScoresToDOM();
   localStorage.setItem("bestScores", JSON.stringify(bestScoreArray));
+  bestScoresToDOM();
 }
 
 //Reset
