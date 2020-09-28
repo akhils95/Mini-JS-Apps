@@ -228,4 +228,8 @@ button:active {
     top: 10px;
     font-size: 1.5rem;
   }
+
+  .result-page {
+    width: 90vw;
+  }
 }
