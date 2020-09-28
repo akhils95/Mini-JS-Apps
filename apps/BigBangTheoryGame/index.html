@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R-P-S-L-S Game | ASC</title>
+    <link rel="icon" type="image/png" href="images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="rules-icon">
+      <i class="fas fa-info-circle" id="rules-icon"></i>
+    </div>
+    <div class="rules-modal" style="display: none">
+      <i class="fas fa-times" id="close-modal"></i>
+      <h1>THE RULES</h1>
+      <ul>
+        <li>
+          Scissors( <span><i class="fas fa-hand-scissors"></i></span> ) cuts
+          Paper( <span><i class="fas fa-hand-paper"></i></span> )
+        </li>
+        <li>
+          Paper( <span><i class="fas fa-hand-paper"></i></span> ) covers Rock(
+          <span><i class="fas fa-hand-rock"></i></span> )
+        </li>
+        <li>
+          Rock( <span><i class="fas fa-hand-rock"></i></span> ) crushes Lizard(
+          <span><i class="fas fa-hand-lizard"></i></span> )
+        </li>
+        <li>
+          Lizard( <span><i class="fas fa-hand-lizard"></i></span> ) poisons
+          Spock( <span><i class="fas fa-hand-spock"></i></span> )
+        </li>
+        <li>
+          Spock( <span><i class="fas fa-hand-spock"></i></span> ) smashes
+          Scissors( <span><i class="fas fa-hand-scissors"></i></span> )
+        </li>
+        <li>
+          Scissors( <span><i class="fas fa-hand-scissors"></i></span> )
+          decapitates Lizard( <span><i class="fas fa-hand-lizard"></i></span> )
+        </li>
+        <li>
+          Lizard( <span><i class="fas fa-hand-lizard"></i></span> ) eats Paper(
+          <span><i class="fas fa-hand-paper"></i></span> )
+        </li>
+        <li>
+          Paper( <span><i class="fas fa-hand-paper"></i></span> ) disproves
+          Spock( <span><i class="fas fa-hand-spock"></i></span> )
+        </li>
+        <li>
+          Spock( <span><i class="fas fa-hand-spock"></i></span> ) vaporizes
+          Rock( <span><i class="fas fa-hand-rock"></i></span> )
+        </li>
+        <li>
+          Rock( <span><i class="fas fa-hand-rock"></i></span> ) crushes
+          Scissors( <span><i class="fas fa-hand-scissors"></i></span> )
+        </li>
+      </ul>
+    </div>
+    <div class="game-container">
+      <div class="header">
+        <h1>Rock Paper Scissors Lizard Spock</h1>
+      </div>
+      <div class="player-container" id="player">
+        <h2>
+          You - <span id="player-score">0</span
+          ><span class="choice" id="player-choice"></span>
+        </h2>
+        <i
+          class="fas fa-hand-rock icon"
+          title="Rock"
+          id="playerRock"
+          onclick="select('rock')"
+        ></i>
+        <i
+          class="fas fa-hand-paper icon"
+          title="Paper"
+          id="playerPaper"
+          onclick="select('paper')"
+        ></i>
+        <i
+          class="fas fa-hand-scissors icon"
+          title="Scissors"
+          id="playerScissors"
+          onclick="select('scissors')"
+        ></i>
+        <i
+          class="fas fa-hand-lizard icon"
+          title="Lizard"
+          id="playerLizard"
+          onclick="select('lizard')"
+        ></i>
+        <i
+          class="fas fa-hand-spock icon"
+          title="Spock"
+          id="playerSpock"
+          onclick="select('spock')"
+        ></i>
+      </div>
+      <div class="player-container" id="computer">
+        <h2>
+          Computer - <span id="computer-score">0</span
+          ><span class="choice" id="computer-choice"></span>
+        </h2>
+        <i class="fas fa-hand-rock icon" title="Rock" id="computerRock"></i>
+        <i class="fas fa-hand-paper icon" title="Paper" id="computerPaper"></i>
+        <i
+          class="fas fa-hand-scissors icon"
+          title="Scissors"
+          id="computerScissors"
+        ></i>
+        <i
+          class="fas fa-hand-lizard icon"
+          title="Lizard"
+          id="computerLizard"
+        ></i>
+        <i class="fas fa-hand-spock icon" title="Spock" id="computerSpock"></i>
+      </div>
+      <i
+        class="fas fa-sync-alt reset-icon"
+        title="Reset Score"
+        onclick="resetAll()"
+      ></i>
+      <div class="result-container">
+        <h3 class="result-text" id="result-text">Your Move</h3>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

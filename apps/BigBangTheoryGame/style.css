@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0049b7;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rules-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.fa-info-circle {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  margin-right: 0 !important;
+}
+
+.fa-info-circle:hover {
+  color: rgb(255, 255, 255);
+}
+
+.rules-modal {
+  height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  position: absolute;
+  margin: auto;
+  z-index: 20;
+  background: #333;
+  border-radius: 15px;
+  color: white;
+  padding: 50px 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.rules-modal h1 {
+  font-size: 3.5rem;
+}
+
+.rules-modal ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  list-style-type: none;
+}
+
+.rules-modal ul li {
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.rules-modal ul li .fas {
+  font-size: 1.5rem !important;
+  margin-right: 0 !important;
+}
+
+.fa-times {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-right: 0 !important;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  text-shadow: 0 0 5px whitesmoke;
+}
+
+.game-container {
+  width: 530px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px -5px rgba(33, 33, 33, 0.7);
+  overflow: hidden;
+}
+
+.header {
+  background: rgb(241, 154, 40);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #333;
+}
+
+.player-container {
+  margin: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.fas {
+  font-size: 50px;
+  margin-right: 40px;
+  user-select: none;
+}
+
+#player .fas,
+#player .choice {
+  cursor: pointer;
+  color: rgb(192, 112, 8);
+}
+
+#player .fas:hover {
+  text-shadow: 0 0 5px #333;
+  color: rgb(241, 154, 40);
+}
+
+#computer .fas,
+#computer .choice {
+  color: rgb(185, 6, 6);
+}
+
+#player .fas:last-of-type,
+#computer .fas:last-of-type {
+  margin-right: 0;
+}
+
+.selected {
+  text-shadow: 0 0 5px#333;
+  color: rgb(255, 255, 255) !important;
+}
+
+.selected:hover {
+  text-shadow: 0 0 5px#333 !important;
+}
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .rules-modal ul li {
+    width: 100%;
+  }
+
+  .game-container {
+    width: 95%;
+    height: 580px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .fas {
+    margin-right: 20px;
+  }
+
+  .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container {
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container {
+    margin: 43px 0 25px 20px;
+  }
+
+  .fas {
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 15px;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
