@@ -15,6 +15,7 @@ const appInfo = [
   ["Music Player", "MusicPlayer"],
   ["Joke Teller", "JokeTeller"],
   ["Video Player", "VideoPlayer"],
+  ["Analog Clock", "AnalogClock"],
 ];
 
 const list = document.querySelector(".list");
