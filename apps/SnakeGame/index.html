@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game | ASC</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.svg" type="image/gif" sizes="16x16" />
+    <script src="game.js" defer type="module"></script>
+  </head>
+  <body>
+    <div id="game-board"></div>
+    <div class="gameover" style="display: none">
+      <h1>GAME OVER!</h1>
+      <button class="restart" onclick="location.reload()">Play Again</button>
+    </div>
+    <div class="controls">
+      <div class="direction-box" id="left">
+        <i class="fas fa-long-arrow-alt-left"></i>
+      </div>
+      <div class="direction-box" id="up">
+        <i class="fas fa-long-arrow-alt-up"></i>
+      </div>
+      <div class="direction-box" id="down">
+        <i class="fas fa-long-arrow-alt-down"></i>
+      </div>
+      <div class="direction-box" id="right">
+        <i class="fas fa-long-arrow-alt-right"></i>
+      </div>
+    </div>
+  </body>
+</html>
