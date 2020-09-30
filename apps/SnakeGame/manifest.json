@@ -1,6 +1,6 @@
 {
-  "short_name": "Timer",
-  "name": "Countdown Timer | ASC",
+  "short_name": "Snake Game",
+  "name": "Snake Game | ASC",
   "icons": [
     {
       "src": "images/favicon.svg",
