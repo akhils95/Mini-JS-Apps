@@ -3,11 +3,20 @@ import { randomGridPosition } from "./grid.js";
 
 let food = getRandomFoodPosition();
 const expansionRate = 1;
+let score = 0;
 
 export function update() {
   if (onSnake(food)) {
     expandSnake(expansionRate);
     food = getRandomFoodPosition();
+    score++;
+    document.getElementById("score").textContent = score;
+    document.getElementById("score").style.color = "#087505";
+    setTimeout(() => {
+      document.getElementById("score").style.color = "black";
+    }, 300);
+
+    document.getElementById("finalScore").textContent = score;
   }
 }
 

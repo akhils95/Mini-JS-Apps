@@ -28,6 +28,22 @@ body {
   grid-gap: 0.5vmin;
 }
 
+.score-container {
+  width: 95vmin;
+  height: 95vmin;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 8;
+}
+
+.score {
+  color: black;
+  text-align: right;
+  width: 100%;
+  padding: 20px 30px;
+  user-select: none;
+}
+
 .snake {
   background-color: rgb(24, 98, 173);
   border-radius: 20%;
@@ -83,6 +99,12 @@ body {
   user-select: none;
   color: white;
   text-shadow: 0 2px 5px black;
+}
+
+.gameover h2 {
+  font-size: 3rem;
+  user-select: none;
+  color: white;
 }
 
 .restart {
