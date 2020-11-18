@@ -3,6 +3,7 @@ const appInfo = [
   ["Snake Game", "SnakeGame"],
   ["Math Sprint Game", "MathSprintGame"],
   ["Calculator", "Calculator"],
+  ["Paint Canvas", "PaintCanvas"],
   ["Stone Paper Scissors Lizard Spock - Game", "BigBangTheoryGame"],
   ["Light / Dark Mode", "LightModeDarkMode"],
   ["Custom Countdown", "CustomCountdown"],
