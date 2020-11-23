@@ -1,6 +1,7 @@
 const appInfo = [
   ["Tic Tac Toe", "TicTacToe"],
   ["Snake Game", "SnakeGame"],
+  ["Pong Game", "PongGame"],
   ["Math Sprint Game", "MathSprintGame"],
   ["Calculator", "Calculator"],
   ["Paint Canvas", "PaintCanvas"],
