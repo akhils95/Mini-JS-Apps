@@ -6,6 +6,7 @@ const appInfo = [
   ["Calculator", "Calculator"],
   ["Paint Canvas", "PaintCanvas"],
   ["Stone Paper Scissors Lizard Spock - Game", "BigBangTheoryGame"],
+  ["Pushups Recorder", "PushupsRecorder"],
   ["Light / Dark Mode", "LightModeDarkMode"],
   ["Custom Countdown", "CustomCountdown"],
   ["Bookmarks", "Bookmarks"],

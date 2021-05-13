@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+  color: whitesmoke;
+  font-family: "Girassol", cursive;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.new-day {
+  height: 10vh;
+  border-radius: 15px;
+  color: #333;
+  background: whitesmoke;
+  width: 50%;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-area,
+.action-area {
+  height: 45vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-area {
+  justify-content: center;
+}
+
+.action-area {
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.add-one {
+  height: 20vh;
+  width: 20vh;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-one:hover {
+  filter: brightness(120%);
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.add-one:active {
+  transform: translateY(2px);
+  box-shadow: none;
+  user-select: none;
+  filter: brightness(90%);
+}
+
+.count-input {
+  width: 20vw;
+  background: url(images/favicon.svg);
+  background-position: 90%;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  font-family: "Girassol", cursive;
+  color: #333;
+  border-radius: 20px;
+  color: white;
+}
+
+.count-input::placeholder {
+  color: white;
+}
+
+.count-input:focus {
+  outline: none;
+  background-color: white;
+  border-bottom: red 2px solid;
+  width: 25vw;
+  transition: all 0.5s;
+  color: #333;
+}
+
+.add-button {
+  cursor: pointer;
+  border-radius: 20px;
+  border: white 2px solid;
+  padding: 10px 20px;
+}
+
+.add-button:hover {
+  background: white;
+  color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .new-day {
+    width: 90%;
+  }
+
+  .count-input {
+    width: 70vw;
+  }
+
+  .count-input:focus {
+    width: 80vw;
+  }
+}
