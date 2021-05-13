@@ -7,8 +7,8 @@ const addManualBtn = document.getElementById('add-button');
 
 //Populate dom on startup
 function populate() {
-    if(sessionStorage.getItem("count")){
-        count.innerHTML = sessionStorage.getItem("count");
+    if(localStorage.getItem("count")){
+        count.innerHTML = localStorage.getItem("count");
     } else {
         count.innerHTML = 0;
     }
@@ -17,7 +17,7 @@ function populate() {
 //Start a new day (reset)
 function reset (){
     count.innerHTML = 0;
-    sessionStorage.removeItem("count");
+    localStorage.removeItem("count");
 }
 
 //Add to count
@@ -25,7 +25,7 @@ function addToCount (number) {
     var oldCount = parseInt(count.innerHTML);
     var newCount = oldCount + number;
     count.innerHTML = newCount;
-    sessionStorage.setItem("count", newCount)
+    localStorage.setItem("count", newCount)
 }
 
 function addOne() {
