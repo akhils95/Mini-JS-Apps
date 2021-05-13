@@ -7,7 +7,9 @@ const addManualBtn = document.getElementById('add-button');
 
 //Populate dom on startup
 function populate() {
-    count.innerHTML = sessionStorage.getItem("count");
+    if(sessionStorage.getItem("count")){
+        count.innerHTML = sessionStorage.getItem("count");
+    }
 }
 
 //Start a new day (reset)
