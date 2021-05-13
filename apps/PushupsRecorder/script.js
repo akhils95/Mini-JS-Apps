@@ -9,6 +9,8 @@ const addManualBtn = document.getElementById('add-button');
 function populate() {
     if(sessionStorage.getItem("count")){
         count.innerHTML = sessionStorage.getItem("count");
+    } else {
+        count.innerHTML = 0;
     }
 }
 
