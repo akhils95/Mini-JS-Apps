@@ -44,4 +44,4 @@ addManualBtn.addEventListener("click", addManual);
 resetBtn.addEventListener('click', reset);
 
 //On Startup
-populate();
+window.addEventListener("load", populate);
