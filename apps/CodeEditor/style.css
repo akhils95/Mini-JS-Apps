@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 5vh;
+  background-color: #131313;
+  color: whitesmoke;
+  font-family: "Girassol", cursive;
+}
+
+.editor {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 45vh;
+}
+
+.editor-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 5vh;
+}
+
+textarea,
+iframe {
+  background: #222;
+  outline: none;
+  border: none;
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+textarea {
+  width: 30%;
+  height: 100%;
+  overflow: scroll;
+  resize: none;
+}
+
+.output-head {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  height: 3vh;
+}
+
+iframe {
+  height: 44vh;
+  width: 100%;
+}
+
+.small-screen {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+.info {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-5vh);
+}
+
+.modal {
+  height: 400px;
+  width: 600px;
+  background: rgb(204, 204, 204);
+  border-radius: 20px;
+  color: rgb(160, 77, 77);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+/*Scroll Bar*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #a7a7a7;
+}
+
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(83, 83, 83);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 0;
+  }
+
+  .small-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

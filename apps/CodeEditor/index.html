@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor | ASC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="info" id="info">
+        <div class="modal">
+            <img class="close" id="close" src="images/cross.svg" alt="close" />
+            <h2>Will work on syntax highlighting soon</h2>
+        </div>
+    </div>
+    <div class=" small-screen">
+        <h2>Open app on a bigger screen.</h2>
+    </div>
+    <div class="editor-head">
+        <H2>HTML</H2>
+        <H2>CSS</H2>
+        <H2>JS</H2>
+    </div>
+    <div class="editor" id="editor">
+        <textarea id="html-part"></textarea>
+        <textarea id="css-part"></textarea>
+        <textarea id="js-part"></textarea>
+    </div>
+    <div class="output-head">
+        <h2>OUTPUT</h2>
+        <a href="#" id="download"><img src="images/download.svg" /></a>
+    </div>
+    <iframe title="output" id="output"></iframe>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
