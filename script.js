@@ -5,6 +5,7 @@ const appInfo = [
   ["Math Sprint Game", "MathSprintGame"],
   ["Calculator", "Calculator"],
   ["Paint Canvas", "PaintCanvas"],
+  ["Maze Game", "MazeGame"],
   ["Stone Paper Scissors Lizard Spock - Game", "BigBangTheoryGame"],
   ["Pushups Recorder", "PushupsRecorder"],
   ["Code Editor", "CodeEditor"],

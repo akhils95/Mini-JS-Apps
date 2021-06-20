@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #555;
+  font-family: "Roboto Mono", monospace;
+}
+
+.full-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  background: #333;
+  border-radius: 50px;
+  box-shadow: 00 10px 10px 5px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.logo {
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+  position: relative;
+}
+
+.game-over {
+  margin: 10px;
+  border-radius: 19px;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  background: rgba(33, 33, 33, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over h2 {
+  margin-bottom: 10px;
+}
+
+#difficulty {
+  padding: 15px 0 10px 0;
+}
+
+.radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+/* On Hover show different colors for radio buttons */
+.radio-container:hover #easy ~ .radio {
+  background-color: rgb(93, 228, 127);
+}
+
+.radio-container:hover #medium ~ .radio {
+  background-color: rgb(228, 240, 120);
+}
+
+.radio-container:hover #hard ~ .radio {
+  background-color: rgb(228, 100, 100);
+}
+
+/* When the radio button is checked, add a background */
+.radio-container #easy:checked ~ .radio {
+  background-color: rgb(45, 163, 74);
+}
+
+.radio-container #medium:checked ~ .radio {
+  background-color: rgb(189, 204, 55);
+}
+
+.radio-container #hard:checked ~ .radio {
+  background-color: rgb(160, 52, 52);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.green-button {
+  background-color: rgb(45, 163, 74);
+}
+
+.yellow-button {
+  background-color: rgb(189, 204, 55);
+}
+
+.red-button {
+  background-color: rgb(160, 52, 52);
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+  filter: brightness(90%);
+  transform: translateY(2px);
+  box-shadow: 0 -2px 0 0 rgba(0, 0, 0, 0.6) inset;
+}
+
+.score {
+  margin-bottom: 1.5em;
+  background-color: #333;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.time,
+.moves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+canvas {
+  border: solid white 2px;
+  z-index: 10;
+  position: relative;
+}
+
+.game-board {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 1000;
+  display: grid;
+  gap: 6px;
+}
+
+.easy-grid {
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.medium-grid {
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.hard-grid {
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+}
+
+.controls {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+}
+
+.direction-box {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px 5px rgb(33, 33, 33, 0.7);
+}
+
+.direction-box:hover {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.fas {
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .full-page {
+    justify-content: left;
+  }
+}

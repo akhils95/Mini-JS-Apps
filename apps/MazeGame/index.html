@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game | ASC</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.svg" type="image/gif" sizes="16x16" />
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="welcome">
+            <h1>Maze Game</h1>
+            <div style="position:relative">
+                <img class="logo" alt="maze logo" src="images/favicon.svg" />
+                <div class="game-over" style="display:none">
+                    <h2>GAME OVER!</h2>
+                    <p>Time Taken: <span id="finalTime">00:00</span></p>
+                    <p>Moves Made: <span id="finalMoves">00</span></p>
+                </div>
+            </div>
+            <p id="difficulty">Choose Difficulty</p>
+            <div class="difficulty-wrapper">
+                <div class="radio-wrapper">
+                    <label class="radio-container" for="easy">Easy
+                        <input type="radio" id="easy" name="difficulty" value="easy" checked>
+                        <span class="radio"></span>
+                    </label>
+                    <label class="radio-container" for="medium">Medium
+                        <input type="radio" id="medium" name="difficulty" value="medium">
+                        <span class="radio"></span>
+                    </label>
+                    <label class="radio-container" for="hard">Hard
+                        <input type="radio" id="hard" name="difficulty" value="hard">
+                        <span class="radio"></span>
+                    </label>
+                </div>
+            </div>
+            <button id="start" class="green-button">Create Maze</button>
+        </div>
+        <div class=score style="display:none">
+            <div class="time">Time<span id="time">00:00</span> </div>
+            <div class="moves">Moves<span id="moves">00</span></div>
+        </div>
+        <div>
+            <div class="game-board easy-grid" id="gameBoard" style="display:none"></div>
+            <canvas class="maze"></canvas>
+        </div>
+        <div class="controls">
+            <div class="direction-box" id="left">
+                <i class="fas fa-long-arrow-alt-left"></i>
+            </div>
+            <div class="direction-box" id="up">
+                <i class="fas fa-long-arrow-alt-up"></i>
+            </div>
+            <div class="direction-box" id="down">
+                <i class="fas fa-long-arrow-alt-down"></i>
+            </div>
+            <div class="direction-box" id="right">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
