@@ -8,6 +8,7 @@ const appInfo = [
   ["Stone Paper Scissors Lizard Spock - Game", "BigBangTheoryGame"],
   ["Pushups Recorder", "PushupsRecorder"],
   ["Code Editor", "CodeEditor"],
+  ["Weather App", "WeatherApp"],
   ["Light / Dark Mode", "LightModeDarkMode"],
   ["Custom Countdown", "CustomCountdown"],
   ["Bookmarks", "Bookmarks"],

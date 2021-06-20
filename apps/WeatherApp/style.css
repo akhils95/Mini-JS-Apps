@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 4px;
+}
+
+span {
+  font-weight: bold;
+  transform: scale(105%);
+}
+
+.weather-box {
+  width: 100%;
+  margin: 1em;
+  max-width: 400px;
+  background: rgba(33, 33, 33, 0.8);
+  color: white;
+  border-radius: 2em;
+  padding: 1em;
+  box-shadow: 0 10px 5px 2px rgba(0, 0, 0, 0.6);
+}
+
+.weather-info {
+  width: 100%;
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 4em;
+  background: rgba(150, 150, 150, 0.2);
+  border-radius: 2em;
+}
+
+.search {
+  padding: 10px 15px;
+  border-radius: 1.5em;
+  color: white;
+  background: none;
+  border: none;
+  border-bottom: solid whitesmoke 1px;
+  width: 60%;
+  transition: all 0.5s linear;
+}
+
+.search::placeholder {
+  color: white;
+  text-transform: uppercase;
+}
+
+.search:focus {
+  position: absolute;
+  left: 2em;
+  outline: none;
+  width: 70%;
+  transition: all 0.5s linear;
+  background: rgb(44, 44, 44);
+}
+
+.search-btn {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2em;
+  transition: all 0.2s linear;
+}
+
+.search-btn:hover {
+  filter: brightness(110%);
+  transform: scale(110%);
+}
+
+.search-btn:active {
+  filter: brightness(95%);
+  transform: scale(95%);
+}
+
+.info-wrap,
+.pollution-info {
+  background: rgba(150, 150, 150, 0.2);
+  border-radius: 2em;
+  padding: 2em 1em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrap {
+  width: 140px;
+  height: 140px;
+  padding: 20px;
+  background: rgb(131, 131, 131);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.scale {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1em;
+}
+
+.scale-length {
+  width: 100%;
+  height: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.aqi1,
+.aqi2,
+.aqi3,
+.aqi4,
+.aqi5 {
+  width: 20%;
+  height: 5px;
+}
+
+.aqi1 {
+  background: green;
+}
+
+.aqi2 {
+  background: yellow;
+}
+
+.aqi3 {
+  background: orange;
+}
+
+.aqi4 {
+  background: red;
+}
+
+.aqi5 {
+  background: purple;
+}
+
+.pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid white;
+  top: 6px;
+}
+
+.scale-label {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.components {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.link-to-other {
+  margin-top: 0.75em;
+  background: rgba(33, 33, 33, 0.6);
+  padding: 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}

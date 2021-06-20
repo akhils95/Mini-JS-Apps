@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | ASC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="weather-box">
+        <div class="weatherInfo">
+            <div class="search-wrap">
+                <input id="inputTxt" type="text" class="search" placeholder="enter a location">
+                <button id="inputBtn" class="search-btn">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1.5em"
+                        width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                            clip-rule="evenodd">
+                        </path>
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                            clip-rule="evenodd">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="info-wrap" id="weatherInfo">
+                <h3>Weather in <span id="location">--------, --</span></h3>
+                <p>Today: <span id="time">---, -- --- ---- --:--:--</span></p>
+                <h1 id="temp">--°C</h1>
+                <h2 id="highLow">--°C / --°C</h2>
+                <div class="icon-wrap">
+                    <img src="" alt="weather" class="weather-icon" id=weatherIcon>
+                </div>
+                <p id="weatherDescription"><span>-------</span> (--------------)</p>
+                <p>Humidity: <span id="humidity">---%</span></p>
+                <p>Wind Speed: <span id="wind">--- km/h</span></p>
+                <div class="link-to-other" id="switchAqi">
+                    AQI: <span id="aqi">--</span>
+                </div>
+            </div>
+            <div class="pollution-info" id="pollutionInfo" style="display:none">
+                <h3>Pollution in <span id="location1">--------, --</span></h3>
+                <p>Today: <span id="time1">---, -- --- ---- --:--:--</span></p>
+                <div class="scale" id="pollutionScale">
+                    <div class="scale-length">
+                        <div class="aqi1"></div>
+                        <div class="aqi2"></div>
+                        <div class="aqi3"></div>
+                        <div class="aqi4"></div>
+                        <div class="aqi5"></div>
+                        <div class="pointer" id="aqiPointer"></div>
+                    </div>
+                    <div class="scale-label">
+                        <p id="aqi1">Good</p>
+                        <p id="aqi2">Fair</p>
+                        <p id="aqi3">Moderate</p>
+                        <p id="aqi4">Poor</p>
+                        <p id="aqi5">Very Poor</p>
+                    </div>
+                </div>
+                <h2>Components (μg/m3)</h2>
+                <div class="components">
+                    <p>CO: <span id="co">--</span></p>
+                    <p>NO: <span id="no">--</span></p>
+                    <p>NO<sub>2</sub>: <span id="no2">--</span></p>
+                    <p>O<sub>3</sub>: <span id="o3">--</span></p>
+                    <p>SO<sub>2</sub>: <span id="so2">--</span></p>
+                    <p>PM<sub>2.5</sub>: <span id="pm2.5">--</span></p>
+                    <p>PM<sub>10</sub>: <span id="pm10">--</span></p>
+                    <p>NH<sub>3</sub>: <span id="nh3">--</span></p>
+                </div>
+                <div class="link-to-other" id="switchWeather">
+                    TEMP: <span id="temp2">--°C</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
