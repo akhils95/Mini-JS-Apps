@@ -50,7 +50,7 @@ function buildBookmarks() {
     const favicon = document.createElement("img");
     favicon.setAttribute(
       "src",
-      `https://s2.googleusercontent.com/s2/favicons?domain=${url}`
+      `http://www.google.com/s2/favicons?domain=${url}`
     );
     favicon.setAttribute("alt", "favicon");
     const link = document.createElement("a");

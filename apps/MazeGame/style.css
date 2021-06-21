@@ -273,3 +273,10 @@ canvas {
     justify-content: left;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .game-board {
+    width: 100vw;
+    height: 100vw;
+  }
+}

@@ -373,13 +373,21 @@ const gamePlay = () => {
     window.requestAnimationFrame(gamePlay);
 }
 
+const createMaze = () => {
+    if (screen.width < 500) {
+        newMaze = new Maze(screen.width, buildSize, buildSize);
+    } else {
+        newMaze = new Maze(500, buildSize, buildSize);
+    }
+}
+
 // Build maze function
 let buildSize = 10;
 const buildMaze = () => {
     document.querySelector('.welcome').setAttribute('style', 'display: none');
     document.querySelector('.score').setAttribute('style', 'display: flex');
     gameBoard.setAttribute('style', 'display: grid');
-    newMaze = new Maze(500, buildSize, buildSize);
+    createMaze();
     newMaze.setup();
     newMaze.draw();
     populateBone();
