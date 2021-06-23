@@ -22,6 +22,7 @@ const appInfo = [
   ["Joke Teller", "JokeTeller"],
   ["Video Player", "VideoPlayer"],
   ["BMI Calculator", "BMICalculator"],
+  ["Analog Stopwatch", "AnalogStopwatch"],
   ["Analog Clock", "AnalogClock"],
 ];
 

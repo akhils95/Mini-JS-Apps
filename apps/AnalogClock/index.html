@@ -27,6 +27,9 @@
         const hr = document.querySelector('#hr');
         const mn = document.querySelector('#mn');
         const sc = document.querySelector('#sc');
+        const audio = new Audio('bgSound.MP3');
+        audio.loop = true
+        window.addEventListener('load', () => audio.play());
         setInterval(() => {
             let day = new Date();
             let hh = day.getHours() * 30;
