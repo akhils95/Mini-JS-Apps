@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+
+:root {
+  --primary-color: #ffff88;
+  --lines: #54a3d8;
+  --margin: #b62525;
+  --text: #333;
+}
+
+[data-theme="dark"] {
+  --primary-color: #333;
+  --lines: #76bdec;
+  --margin: #e25555;
+  --text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #555555;
+  color: var(--text);
+  font-family: "Patrick Hand SC", cursive;
+  position: relative;
+}
+
+.color-mode-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.color-mode-btn img {
+  height: 30px;
+  transition: all 0.1s linear;
+}
+
+.color-mode-btn img:hover {
+  filter: brightness(110%);
+  transform: scale(110%);
+}
+
+.list-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  color: #333;
+}
+
+.add-note {
+  width: 90vw;
+  padding: 20px 0;
+  background-color: #a7d4f1;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list {
+  margin-top: 15px;
+  user-select: none;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.note-card {
+  width: 85vw;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 5px 0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  color: var(--text);
+}
+
+.note-card:hover {
+  width: 87vw;
+}
+
+.add-modal {
+  background: var(--primary-color);
+  color: var(--text);
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  padding: 20px;
+  position: relative;
+}
+
+.add-modal img {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.input-wrap label {
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.input-wrap input,
+.input-wrap textarea {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  background: #ffffff22;
+  resize: none;
+  border-bottom: solid 2px var(--margin);
+  border-left: solid 2px var(--margin);
+  color: var(--text);
+  font-family: "Patrick Hand SC", cursive;
+  font-size: 18px;
+}
+
+.input-wrap textarea {
+  height: 20vh;
+}
+
+.add-modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Patrick Hand SC", cursive;
+  background: var(--margin);
+  border-radius: 20px;
+}
+
+.back-btn {
+  background: url(images/BackIcon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  transition: all 0.1s linear;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  transform: scale(110%);
+}
+
+.note {
+  width: 80vw;
+  height: 80vh;
+  background: repeating-linear-gradient(
+    var(--primary-color),
+    var(--primary-color) 25px,
+    var(--lines) 26px,
+    var(--lines) 27px
+  );
+  position: relative;
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  height: 40px;
+  background: repeating-linear-gradient(
+    #00000000,
+    #00000000 25px,
+    var(--margin) 26px,
+    var(--margin) 27px
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  top: 5px;
+  font-weight: bold;
+}
+
+.body {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 18px;
+  margin: 0 10px 0 20px;
+  line-height: 27px;
+}
+
+.left-margin {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  left: 0;
+  border-right: solid 2px var(--margin);
+}
+
+.action-btns {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.action-btns img {
+  height: 20px;
+  padding: 0 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}

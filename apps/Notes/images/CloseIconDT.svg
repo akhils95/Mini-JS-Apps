@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.28 350.28">
+    <defs>
+        <style>.cls-1{fill:#fff;}</style>
+    </defs>
+    <title>Asset 1</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <rect class="cls-1" x="99.96" y="-41.41" width="150.36" height="433.09" rx="75.18" transform="translate(-72.55 175.14) rotate(-45)" />
+            <rect class="cls-1" x="99.96" y="-41.41" width="150.36" height="433.09" rx="75.18" transform="translate(175.14 -72.55) rotate(45)" />
+        </g>
+    </g>
+</svg>

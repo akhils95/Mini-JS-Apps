@@ -13,6 +13,7 @@ function compile() {
 
 compile();
 
+const sizeIcons = document.querySelectorAll('.size-icon');
 
 // Download files Function
 var downloadBtn = document.getElementById("download");
@@ -55,3 +56,16 @@ downloadBtn.addEventListener('click', downloadFiles);
 document.getElementById("close").addEventListener("click", () => {
     document.getElementById("info").setAttribute("style", "display:none");
 });
+
+sizeIcons.forEach(sizeIcon => {
+    sizeIcon.addEventListener('click', () => {
+        let elem = sizeIcon.id.replace('I', '');
+        if(sizeIcon.src.includes('collapse')) {
+            document.getElementById(elem).style.flexGrow = 0;
+            sizeIcon.src = 'images/expand.svg'
+        } else {
+            document.getElementById(elem).style.flexGrow = 1;
+            sizeIcon.src = 'images/collapse.svg'
+        }
+    })
+})

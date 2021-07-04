@@ -17,22 +17,39 @@
             <h2>Will work on syntax highlighting soon</h2>
         </div>
     </div>
-    <div class=" small-screen">
-        <h2>Open app on a bigger screen.</h2>
+    <div class="editor-pane">
+        <div class="editor-container" id="html">
+            <div class="editor-head">
+                <h2>HTML</h2>
+                <div class="collapse-btn">
+                    <img class="size-icon" id="htmlI" src="images/collapse.svg" alt="collapse">
+                </div>
+            </div>
+            <textarea id="html-part"></textarea>
+        </div>
+        <div class="editor-container" id="css">
+            <div class="editor-head">
+                <h2>CSS</h2>
+                <div class="collapse-btn">
+                    <img class="size-icon" id="cssI" src="images/collapse.svg" alt="collapse">
+                </div>
+            </div>
+            <textarea id="css-part"></textarea>
+        </div>
+        <div class="editor-container" id="js">
+            <div class="editor-head">
+                <h2>JS</h2>
+                <div class="collapse-btn">
+                    <img class="size-icon" id="jsI" src="images/collapse.svg" alt="collapse">
+                </div>
+            </div>
+            <textarea id="js-part"></textarea>
+        </div>
     </div>
-    <div class="editor-head">
-        <H2>HTML</H2>
-        <H2>CSS</H2>
-        <H2>JS</H2>
-    </div>
-    <div class="editor" id="editor">
-        <textarea id="html-part"></textarea>
-        <textarea id="css-part"></textarea>
-        <textarea id="js-part"></textarea>
-    </div>
+
     <div class="output-head">
         <h2>OUTPUT</h2>
-        <a href="#" id="download"><img src="images/download.svg" /></a>
+        <a href="#" id="download"><img alt="download code" src="images/download.svg" /></a>
     </div>
     <iframe title="output" id="output"></iframe>
 

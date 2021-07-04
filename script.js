@@ -10,6 +10,7 @@ const appInfo = [
   ["Pushups Recorder", "PushupsRecorder"],
   ["Code Editor", "CodeEditor"],
   ["Weather App", "WeatherApp"],
+  ["Notes", "Notes"],
   ["Light / Dark Mode", "LightModeDarkMode"],
   ["Custom Countdown", "CustomCountdown"],
   ["Bookmarks", "Bookmarks"],
