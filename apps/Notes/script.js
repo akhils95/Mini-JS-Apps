@@ -64,7 +64,7 @@ const showModal = (type) => {
     const addBtn = document.createElement('button');
 
     if (type === 'edit') {
-        titleInput.value = newTitle;
+        titleInput.value = newTitle === `<No Name>` ? '' : newTitle;
         noteTextInput.value = newBody;
         addBtn.innerText = "Update Note";
         addBtn.addEventListener('click', editNote);
@@ -89,8 +89,9 @@ const showModal = (type) => {
 }
 
 const addNote = () => {
-    const title = document.getElementById('title').value;
+    let title = document.getElementById('title').value;
     const note = document.getElementById('noteText').value;
+    title = title === '' ? `<No Name>` : title;
     const memoryObject = {id: lastId, title: title, note: note};
     lastId++;
     notesList.push(memoryObject);
@@ -128,6 +129,10 @@ const loadNote = () => {
     note.classList.add('note');
     const leftMargin = document.createElement('div');
     leftMargin.classList.add('left-margin');
+    for(let i = 0; i < 3; i++) {
+        const span = document.createElement('span');
+        leftMargin.appendChild(span);
+    }
     const header = document.createElement('header');
     const title = document.createElement('span');
     title.classList.add('title');
@@ -173,7 +178,9 @@ const closeModal = () => {
 }
 
 const deleteNote = () => {
+    console.log(notesList);
     notesList = notesList.filter((item) => item.id !== selectedNote);
+    console.log(notesList);
     localStorage.setItem('asc-notes', JSON.stringify(notesList));
     goToList();
 }
