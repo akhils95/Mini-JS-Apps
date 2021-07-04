@@ -30,6 +30,7 @@ const displayNoteList = () => {
         list.innerHTML = '';
         const noNotes = document.createElement('h1');
         noNotes.innerText = "No notes added yet. Add some to display"
+        noNotes.style.textAlign = 'center';
         list.appendChild(noNotes);
     }
 }

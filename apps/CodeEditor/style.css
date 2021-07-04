@@ -81,37 +81,6 @@ iframe {
   width: 100%;
 }
 
-.info {
-  background: rgba(0, 0, 0, 0.6);
-  height: 100vh;
-  width: 100vw;
-  z-index: 1000;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(-5vh);
-}
-
-.modal {
-  height: 400px;
-  width: 600px;
-  background: rgb(204, 204, 204);
-  border-radius: 20px;
-  color: rgb(160, 77, 77);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  cursor: pointer;
-}
-
-.close {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-}
-
 /*Scroll Bar*/
 ::-webkit-scrollbar {
   width: 8px;

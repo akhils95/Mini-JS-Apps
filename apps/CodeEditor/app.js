@@ -53,10 +53,6 @@ const htmlEnd = `\n\t<script src="script.js"></script>\n</body>\n\n</html>`;
 
 downloadBtn.addEventListener('click', downloadFiles);
 
-document.getElementById("close").addEventListener("click", () => {
-    document.getElementById("info").setAttribute("style", "display:none");
-});
-
 sizeIcons.forEach(sizeIcon => {
     sizeIcon.addEventListener('click', () => {
         let elem = sizeIcon.id.replace('I', '');
