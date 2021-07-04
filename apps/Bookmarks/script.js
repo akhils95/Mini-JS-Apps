@@ -93,7 +93,7 @@ function storeBookmark(e) {
   e.preventDefault();
   const nameValue = websiteNameEl.value;
   let urlValue = websiteUrlEl.value;
-  if (!urlValue.includes("http://") || !urlValue.includes("https://")) {
+  if (!(urlValue.includes("http://") || urlValue.includes("https://"))) {
     urlValue = `https://${urlValue}`;
   }
   if (!validate(nameValue, urlValue)) {
