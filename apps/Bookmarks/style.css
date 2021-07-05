@@ -200,3 +200,21 @@ button:focus {
     flex-direction: column;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #141414;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #740b0b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e45252;
+}
