@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Encode Sans SC", sans-serif;
+  overflow: hidden;
+}
+
+.pane {
+  width: 50vw;
+  height: 100%;
+}
+
+.editor {
+  background: #ddd;
+  border-right: solid 2px #555;
+  color: black;
+}
+
+.compiler {
+  background: #777;
+  padding: 20px;
+  color: white;
+  overflow: scroll;
+}
+
+.editor textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 20px;
+  font-family: "Encode Sans SC", sans-serif;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .pane {
+    height: 50vh;
+    width: 100vw;
+  }
+
+  .editor {
+    border-right: none;
+    border-bottom: solid 2px #555;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: #1d1d1d;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+}
